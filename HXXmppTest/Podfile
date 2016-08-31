@@ -1,0 +1,14 @@
+platform :ios, '8.0'
+
+target 'HXXmppTest' do
+pod 'AFNetworking', '~> 3.0'
+pod 'MJPhotoBrowser'
+pod 'HyphenateFullSDK', :git => 'https://github.com/easemob/hyphenate-full-cocoapods.git'
+pod 'MWPhotoBrowser'
+pod 'MJExtension'
+pod 'SDWebImage'
+pod 'MBProgressHUD'
+pod 'Masonry'
+pod 'MJRefresh'
+end
+
