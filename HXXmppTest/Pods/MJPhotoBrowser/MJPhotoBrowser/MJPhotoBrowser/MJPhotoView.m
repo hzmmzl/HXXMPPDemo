@@ -9,6 +9,7 @@
 #import "MJPhoto.h"
 #import "MJPhotoLoadingView.h"
 #import <QuartzCore/QuartzCore.h>
+#import <SDWebImageManager.h>
 
 #define ESWeak(var, weakVar) __weak __typeof(&*var) weakVar = var
 #define ESStrong_DoNotCheckNil(weakVar, _var) __typeof(&*weakVar) _var = weakVar
@@ -105,13 +106,12 @@
         ESWeakSelf;
         ESWeak_(_photoLoadingView);
         ESWeak_(_imageView);
-        
-        [SDWebImageManager.sharedManager downloadImageWithURL:_photo.url options:SDWebImageRetryFailed| SDWebImageLowPriority| SDWebImageHandleCookies progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        [SDWebImageManager.sharedManager downloadWithURL:_photo.url options:SDWebImageRetryFailed| SDWebImageLowPriority| SDWebImageHandleCookies progress:^(NSInteger receivedSize, NSInteger expectedSize) {
             ESStrong_(_photoLoadingView);
             if (receivedSize > kMinProgress) {
                 __photoLoadingView.progress = (float)receivedSize/expectedSize;
             }
-        } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+        } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished) {
             ESStrongSelf;
             ESStrong_(_imageView);
             __imageView.image = image;
@@ -222,7 +222,8 @@
 
 - (void)dealloc
 {
-    // 取消请求
-    [_imageView sd_setImageWithURL:[NSURL URLWithString:@"file:///abc"]];
+//     取消请求
+    [_imageView setImageWithURL:[NSURL URLWithString:@"file:///abc"]];
+    
 }
 @end

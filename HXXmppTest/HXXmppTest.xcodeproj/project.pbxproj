@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		B55ABCB741B8B317455247F3 /* libPods-HXXmppTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6324F6F81853E2680A914E58 /* libPods-HXXmppTest.a */; };
+		F3BECA681D77F47B00146B60 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BECA671D77F47B00146B60 /* CustomButton.m */; };
+		F3BECA6D1D77F50800146B60 /* LogAndRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BECA6B1D77F50800146B60 /* LogAndRegistViewController.m */; };
+		F3BECA6E1D77F50800146B60 /* LogAndRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3BECA6C1D77F50800146B60 /* LogAndRegistViewController.xib */; };
 		F3C1541A1D7679E100817B52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C154191D7679E100817B52 /* main.m */; };
 		F3C1541D1D7679E100817B52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C1541C1D7679E100817B52 /* AppDelegate.m */; };
-		F3C154201D7679E100817B52 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C1541F1D7679E100817B52 /* ViewController.m */; };
-		F3C154231D7679E100817B52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C154211D7679E100817B52 /* Main.storyboard */; };
 		F3C154251D7679E100817B52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C154241D7679E100817B52 /* Assets.xcassets */; };
-		F3C154281D7679E100817B52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C154261D7679E100817B52 /* LaunchScreen.storyboard */; };
 		F3C154331D7679E100817B52 /* HXXmppTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C154321D7679E100817B52 /* HXXmppTestTests.m */; };
 		F3C1543E1D7679E100817B52 /* HXXmppTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C1543D1D7679E100817B52 /* HXXmppTestUITests.m */; };
+		F3E1DAE91D76DCD900A382F4 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E1DAE81D76DCD900A382F4 /* UIView+frame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,15 +40,16 @@
 		0D81FE5C72F38EB4F0BF2004 /* Pods-HXXmppTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXXmppTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-HXXmppTest/Pods-HXXmppTest.release.xcconfig"; sourceTree = "<group>"; };
 		6324F6F81853E2680A914E58 /* libPods-HXXmppTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HXXmppTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE5731B2EC0412E4CD0D95A /* Pods-HXXmppTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXXmppTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HXXmppTest/Pods-HXXmppTest.debug.xcconfig"; sourceTree = "<group>"; };
+		F3BECA661D77F47B00146B60 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		F3BECA671D77F47B00146B60 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		F3BECA6A1D77F50800146B60 /* LogAndRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogAndRegistViewController.h; sourceTree = "<group>"; };
+		F3BECA6B1D77F50800146B60 /* LogAndRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogAndRegistViewController.m; sourceTree = "<group>"; };
+		F3BECA6C1D77F50800146B60 /* LogAndRegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogAndRegistViewController.xib; sourceTree = "<group>"; };
 		F3C154151D7679E100817B52 /* HXXmppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXXmppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C154191D7679E100817B52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F3C1541B1D7679E100817B52 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F3C1541C1D7679E100817B52 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F3C1541E1D7679E100817B52 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F3C1541F1D7679E100817B52 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F3C154221D7679E100817B52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F3C1541B1D7679E100817B52 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		F3C1541C1D7679E100817B52 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
 		F3C154241D7679E100817B52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F3C154271D7679E100817B52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3C154291D7679E100817B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3C1542E1D7679E100817B52 /* HXXmppTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HXXmppTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C154321D7679E100817B52 /* HXXmppTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXXmppTestTests.m; sourceTree = "<group>"; };
@@ -55,6 +57,9 @@
 		F3C154391D7679E100817B52 /* HXXmppTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HXXmppTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C1543D1D7679E100817B52 /* HXXmppTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXXmppTestUITests.m; sourceTree = "<group>"; };
 		F3C1543F1D7679E100817B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3E1DAE61D76DB3C00A382F4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F3E1DAE71D76DCD900A382F4 /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
+		F3E1DAE81D76DCD900A382F4 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +105,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F3BECA691D77F4C100146B60 /* RegisterAndLogin */ = {
+			isa = PBXGroup;
+			children = (
+				F3BECA6A1D77F50800146B60 /* LogAndRegistViewController.h */,
+				F3BECA6B1D77F50800146B60 /* LogAndRegistViewController.m */,
+				F3BECA6C1D77F50800146B60 /* LogAndRegistViewController.xib */,
+			);
+			path = RegisterAndLogin;
+			sourceTree = "<group>";
+		};
 		F3C1540C1D7679E000817B52 = {
 			isa = PBXGroup;
 			children = (
@@ -125,13 +140,12 @@
 		F3C154171D7679E100817B52 /* HXXmppTest */ = {
 			isa = PBXGroup;
 			children = (
-				F3C1541B1D7679E100817B52 /* AppDelegate.h */,
-				F3C1541C1D7679E100817B52 /* AppDelegate.m */,
-				F3C1541E1D7679E100817B52 /* ViewController.h */,
-				F3C1541F1D7679E100817B52 /* ViewController.m */,
-				F3C154211D7679E100817B52 /* Main.storyboard */,
+				F3E1DAD91D76D38400A382F4 /* Class */,
+				F3E1DADE1D76D3E000A382F4 /* CustomView */,
+				F3E1DADF1D76D3EE00A382F4 /* Category */,
+				F3E1DACF1D76D36C00A382F4 /* Temp */,
+				F3E1DAD41D76D37700A382F4 /* Other */,
 				F3C154241D7679E100817B52 /* Assets.xcassets */,
-				F3C154261D7679E100817B52 /* LaunchScreen.storyboard */,
 				F3C154291D7679E100817B52 /* Info.plist */,
 				F3C154181D7679E100817B52 /* Supporting Files */,
 			);
@@ -162,6 +176,82 @@
 				F3C1543F1D7679E100817B52 /* Info.plist */,
 			);
 			path = HXXmppTestUITests;
+			sourceTree = "<group>";
+		};
+		F3E1DACF1D76D36C00A382F4 /* Temp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Temp;
+			sourceTree = "<group>";
+		};
+		F3E1DAD41D76D37700A382F4 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				F3C1541B1D7679E100817B52 /* AppDelegate.h */,
+				F3C1541C1D7679E100817B52 /* AppDelegate.m */,
+				F3E1DAE61D76DB3C00A382F4 /* PrefixHeader.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F3E1DAD91D76D38400A382F4 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				F3BECA691D77F4C100146B60 /* RegisterAndLogin */,
+				F3E1DAE31D76D6A500A382F4 /* Message */,
+				F3E1DAE21D76D69B00A382F4 /* AddressBook */,
+				F3E1DAE41D76D6B900A382F4 /* Find */,
+				F3E1DAE51D76D6E500A382F4 /* Me */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		F3E1DADE1D76D3E000A382F4 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				F3BECA661D77F47B00146B60 /* CustomButton.h */,
+				F3BECA671D77F47B00146B60 /* CustomButton.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		F3E1DADF1D76D3EE00A382F4 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F3E1DAE71D76DCD900A382F4 /* UIView+frame.h */,
+				F3E1DAE81D76DCD900A382F4 /* UIView+frame.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F3E1DAE21D76D69B00A382F4 /* AddressBook */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddressBook;
+			sourceTree = "<group>";
+		};
+		F3E1DAE31D76D6A500A382F4 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		F3E1DAE41D76D6B900A382F4 /* Find */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Find;
+			path = ../Find;
+			sourceTree = "<group>";
+		};
+		F3E1DAE51D76D6E500A382F4 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Me;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +360,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3C154281D7679E100817B52 /* LaunchScreen.storyboard in Resources */,
 				F3C154251D7679E100817B52 /* Assets.xcassets in Resources */,
-				F3C154231D7679E100817B52 /* Main.storyboard in Resources */,
+				F3BECA6E1D77F50800146B60 /* LogAndRegistViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +434,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3C154201D7679E100817B52 /* ViewController.m in Sources */,
+				F3BECA681D77F47B00146B60 /* CustomButton.m in Sources */,
+				F3BECA6D1D77F50800146B60 /* LogAndRegistViewController.m in Sources */,
+				F3E1DAE91D76DCD900A382F4 /* UIView+frame.m in Sources */,
 				F3C1541D1D7679E100817B52 /* AppDelegate.m in Sources */,
 				F3C1541A1D7679E100817B52 /* main.m in Sources */,
 			);
@@ -382,25 +473,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		F3C154211D7679E100817B52 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F3C154221D7679E100817B52 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F3C154261D7679E100817B52 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F3C154271D7679E100817B52 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		F3C154401D7679E100817B52 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -423,6 +495,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -468,6 +541,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -491,6 +565,10 @@
 			baseConfigurationReference = 8DE5731B2EC0412E4CD0D95A /* Pods-HXXmppTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_BITCODE = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = "/Users/winbei/Desktop/测试1/HXXMPPDemo/HXXmppTest/HXXmppTest/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = HXXmppTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = winbei.HXXmppTest;
@@ -503,6 +581,10 @@
 			baseConfigurationReference = 0D81FE5C72F38EB4F0BF2004 /* Pods-HXXmppTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_BITCODE = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = "/Users/winbei/Desktop/测试1/HXXMPPDemo/HXXmppTest/HXXmppTest/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = HXXmppTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = winbei.HXXmppTest;

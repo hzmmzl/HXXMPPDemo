@@ -1,0 +1,61 @@
+//
+//  PrefixHeader.pch
+//  TestOCWeiBo
+//
+//  Created by winbei on 16/8/3.
+//  Copyright © 2016年 winbei. All rights reserved.
+//
+
+#ifdef __OBJC__
+#import "UIView+frame.h"
+//#import "UIImageView+WebCache.h"
+//屏幕
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define keyWindow [UIApplication sharedApplication].keyWindow
+#define kAppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
+
+//颜色
+#define kColorWithRBGA(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define kColorWithRBG(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0]
+
+//字体
+#define kSystemFontSize(size) [UIFont systemFontOfSize:size]
+#define kSystemBoldFontSize(size) [UIFont boldSystemFontOfSize:16]
+
+//版本
+#define iosVersion [[[UIDevice currentDevice] systemVersion] floatValue]
+#define IS_IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+#define IS_IOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+
+//NSLog
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+
+// 常用的对象通知
+#define IWNotificationCenter [NSNotificationCenter defaultCenter]
+
+//沙盒地址
+#define NSSearchPath NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)
+
+//iphone、ipad各个型号
+#define iPhone6p ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242,2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define isPadC ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(768, 1024), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define isPadC2 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1024, 768), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define isPadR ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1536, 2048), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define isPadR2 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(2048, 1536), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#endif

@@ -198,17 +198,14 @@
 {
     if (index > 0) {
         MJPhoto *photo = _photos[index - 1];
-        [[SDWebImageManager sharedManager] downloadImageWithURL:photo.url options:SDWebImageRetryFailed|SDWebImageLowPriority progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-            //do nothing
-        }];
+        [[SDWebImageManager sharedManager] downloadWithURL:photo.url options:SDWebImageLowPriority|SDWebImageRetryFailed progress:nil completed:nil];
+        
     }
     
     if (index < _photos.count - 1) {
         MJPhoto *photo = _photos[index + 1];
-        [[SDWebImageManager sharedManager] downloadImageWithURL:photo.url options:SDWebImageRetryFailed|SDWebImageLowPriority progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-            //do nothing
-        }];
-    }
+        [[SDWebImageManager sharedManager] downloadWithURL:photo.url options:SDWebImageRetryFailed|SDWebImageLowPriority progress:nil completed:nil];
+         }
 }
 
 //  index这页是否正在显示

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface YLImageView : UIImageView
 
 @property (nonatomic, copy) NSString *runLoopMode;

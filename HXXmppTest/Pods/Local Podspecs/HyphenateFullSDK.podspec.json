@@ -1,6 +1,6 @@
 {
   "name": "HyphenateFullSDK",
-  "version": "3.1.4",
+  "version": "3.1.5",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/easemob/hyphenate-full-cocoapods.git",
-    "tag": "3.1.4"
+    "tag": "3.1.5"
   },
   "source_files": "HyphenateFullSDK/**/*.{h}",
   "platforms": {
@@ -34,8 +34,7 @@
     "stdc++.6.0.9"
   ],
   "vendored_libraries": [
-    "HyphenateFullSDK/lib/libHyphenateFullSDK_*.a",
-    "HyphenateFullSDK/lib/3rdparty/*.a"
+    "HyphenateFullSDK/lib/libHyphenateFullSDK.a"
   ],
   "xcconfig": {
     "OTHER_LDFLAGS": "-ObjC"

@@ -7,9 +7,13 @@
 //
 
 #import "AppDelegate.h"
-
+//#import "EMSDK.h"
 @interface AppDelegate ()
 
+#define HXAppKey @"hzm123#myxmpp"
+#define HXClientId @"YXA6q0YrcFJREea9aaWeNX-5Vw"
+#define HXClientSecret @"YXA6P-nUTnS6JA0Z5ueSU6yr5oVA5PM"
+#define HXApnsCertName @""//推送证书名（不需要加后缀），详细见下面注释。
 @end
 
 @implementation AppDelegate
