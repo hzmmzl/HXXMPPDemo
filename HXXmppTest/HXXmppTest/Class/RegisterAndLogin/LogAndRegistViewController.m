@@ -7,8 +7,13 @@
 //
 
 #import "LogAndRegistViewController.h"
-
+#import "MBProgressHUD.h"
+#import "MainTabBarController.h"
 @interface LogAndRegistViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passWardTextField;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIButton *registerButton;
 
 @end
 
@@ -16,22 +21,53 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    _userNameTextField.text = @"hzmmzl";
+    _passWardTextField.text = @"111111";
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+/**
+ *  登录
+ *
+ *  @param sender <#sender description#>
+ */
+- (IBAction)loginButtonClicked:(UIButton *)sender {
+    [[EMClient sharedClient] loginWithUsername:_userNameTextField.text password:_passWardTextField.text completion:^(NSString *aUsername, EMError *aError) {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        if (aError) {//失败
+            hud.label.text = @"登录失败";
+        }else{//成功
+            hud.label.text = @"登录成功";
+            KEYWindow.rootViewController = [[MainTabBarController alloc] init];
+        }
+        [hud hideAnimated:YES afterDelay:kDelayTime];
+    }];
+    
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+/**
+ *  注册
+ *
+ *  @param sender <#sender description#>
+ */
+- (IBAction)registerButtonClicked:(UIButton *)sender {
+    if (!_userNameTextField.text.length || !_passWardTextField.text.length) {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.mode = MBProgressHUDModeIndeterminate;
+        hud.label.text = @"请输入用户名或密码";
+        [hud hideAnimated:YES afterDelay:kDelayTime];
+        return;
+    }
+    
+   EMError *error = [[EMClient sharedClient] registerWithUsername:_userNameTextField.text password:_passWardTextField.text];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    if (error) {
+        hud.label.text = @"注册失败";
+        NSLog(@"%@",error.errorDescription);
+    }else{
+        hud.label.text = @"注册成功";
+    }
+    [hud hideAnimated:YES afterDelay:kDelayTime];
 }
-*/
 
 @end

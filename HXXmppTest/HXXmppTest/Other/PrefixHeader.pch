@@ -8,11 +8,13 @@
 
 #ifdef __OBJC__
 #import "UIView+frame.h"
+#import "EMSDK.h"
 //#import "UIImageView+WebCache.h"
+#define kDelayTime 1.5
 //屏幕
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
-#define keyWindow [UIApplication sharedApplication].keyWindow
+#define KEYWindow [UIApplication sharedApplication].keyWindow
 #define kAppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
 //颜色

@@ -16,6 +16,15 @@
 		F3C154251D7679E100817B52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C154241D7679E100817B52 /* Assets.xcassets */; };
 		F3C154331D7679E100817B52 /* HXXmppTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C154321D7679E100817B52 /* HXXmppTestTests.m */; };
 		F3C1543E1D7679E100817B52 /* HXXmppTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C1543D1D7679E100817B52 /* HXXmppTestUITests.m */; };
+		F3C213641D7E642400925874 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C213621D7E642400925874 /* MessageViewController.m */; };
+		F3C213651D7E642400925874 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C213631D7E642400925874 /* MessageViewController.xib */; };
+		F3C213691D7E643900925874 /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C213671D7E643900925874 /* AddressViewController.m */; };
+		F3C2136A1D7E643900925874 /* AddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C213681D7E643900925874 /* AddressViewController.xib */; };
+		F3C2136E1D7E644B00925874 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C2136C1D7E644B00925874 /* FindViewController.m */; };
+		F3C2136F1D7E644B00925874 /* FindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C2136D1D7E644B00925874 /* FindViewController.xib */; };
+		F3C213731D7E645900925874 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C213711D7E645900925874 /* MeViewController.m */; };
+		F3C213741D7E645900925874 /* MeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C213721D7E645900925874 /* MeViewController.xib */; };
+		F3C213781D7E64C100925874 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C213771D7E64C100925874 /* MainTabBarController.m */; };
 		F3E1DAE91D76DCD900A382F4 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E1DAE81D76DCD900A382F4 /* UIView+frame.m */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +66,20 @@
 		F3C154391D7679E100817B52 /* HXXmppTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HXXmppTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C1543D1D7679E100817B52 /* HXXmppTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXXmppTestUITests.m; sourceTree = "<group>"; };
 		F3C1543F1D7679E100817B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3C213611D7E642400925874 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		F3C213621D7E642400925874 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		F3C213631D7E642400925874 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		F3C213661D7E643900925874 /* AddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressViewController.h; sourceTree = "<group>"; };
+		F3C213671D7E643900925874 /* AddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
+		F3C213681D7E643900925874 /* AddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressViewController.xib; sourceTree = "<group>"; };
+		F3C2136B1D7E644B00925874 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
+		F3C2136C1D7E644B00925874 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
+		F3C2136D1D7E644B00925874 /* FindViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindViewController.xib; sourceTree = "<group>"; };
+		F3C213701D7E645900925874 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
+		F3C213711D7E645900925874 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
+		F3C213721D7E645900925874 /* MeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeViewController.xib; sourceTree = "<group>"; };
+		F3C213761D7E64C100925874 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		F3C213771D7E64C100925874 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		F3E1DAE61D76DB3C00A382F4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F3E1DAE71D76DCD900A382F4 /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		F3E1DAE81D76DCD900A382F4 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
@@ -178,6 +201,15 @@
 			path = HXXmppTestUITests;
 			sourceTree = "<group>";
 		};
+		F3C213751D7E647B00925874 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F3C213761D7E64C100925874 /* MainTabBarController.h */,
+				F3C213771D7E64C100925874 /* MainTabBarController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		F3E1DACF1D76D36C00A382F4 /* Temp */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +230,7 @@
 		F3E1DAD91D76D38400A382F4 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				F3C213751D7E647B00925874 /* Main */,
 				F3BECA691D77F4C100146B60 /* RegisterAndLogin */,
 				F3E1DAE31D76D6A500A382F4 /* Message */,
 				F3E1DAE21D76D69B00A382F4 /* AddressBook */,
@@ -228,6 +261,9 @@
 		F3E1DAE21D76D69B00A382F4 /* AddressBook */ = {
 			isa = PBXGroup;
 			children = (
+				F3C213661D7E643900925874 /* AddressViewController.h */,
+				F3C213671D7E643900925874 /* AddressViewController.m */,
+				F3C213681D7E643900925874 /* AddressViewController.xib */,
 			);
 			path = AddressBook;
 			sourceTree = "<group>";
@@ -235,6 +271,9 @@
 		F3E1DAE31D76D6A500A382F4 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				F3C213611D7E642400925874 /* MessageViewController.h */,
+				F3C213621D7E642400925874 /* MessageViewController.m */,
+				F3C213631D7E642400925874 /* MessageViewController.xib */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -242,6 +281,9 @@
 		F3E1DAE41D76D6B900A382F4 /* Find */ = {
 			isa = PBXGroup;
 			children = (
+				F3C2136B1D7E644B00925874 /* FindViewController.h */,
+				F3C2136C1D7E644B00925874 /* FindViewController.m */,
+				F3C2136D1D7E644B00925874 /* FindViewController.xib */,
 			);
 			name = Find;
 			path = ../Find;
@@ -250,6 +292,9 @@
 		F3E1DAE51D76D6E500A382F4 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				F3C213701D7E645900925874 /* MeViewController.h */,
+				F3C213711D7E645900925874 /* MeViewController.m */,
+				F3C213721D7E645900925874 /* MeViewController.xib */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -360,8 +405,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C213741D7E645900925874 /* MeViewController.xib in Resources */,
+				F3C2136F1D7E644B00925874 /* FindViewController.xib in Resources */,
 				F3C154251D7679E100817B52 /* Assets.xcassets in Resources */,
 				F3BECA6E1D77F50800146B60 /* LogAndRegistViewController.xib in Resources */,
+				F3C213651D7E642400925874 /* MessageViewController.xib in Resources */,
+				F3C2136A1D7E643900925874 /* AddressViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,11 +483,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C213731D7E645900925874 /* MeViewController.m in Sources */,
+				F3C213641D7E642400925874 /* MessageViewController.m in Sources */,
+				F3C213691D7E643900925874 /* AddressViewController.m in Sources */,
 				F3BECA681D77F47B00146B60 /* CustomButton.m in Sources */,
 				F3BECA6D1D77F50800146B60 /* LogAndRegistViewController.m in Sources */,
 				F3E1DAE91D76DCD900A382F4 /* UIView+frame.m in Sources */,
+				F3C213781D7E64C100925874 /* MainTabBarController.m in Sources */,
 				F3C1541D1D7679E100817B52 /* AppDelegate.m in Sources */,
 				F3C1541A1D7679E100817B52 /* main.m in Sources */,
+				F3C2136E1D7E644B00925874 /* FindViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
