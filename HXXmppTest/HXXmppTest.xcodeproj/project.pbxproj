@@ -25,6 +25,8 @@
 		F3C213731D7E645900925874 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C213711D7E645900925874 /* MeViewController.m */; };
 		F3C213741D7E645900925874 /* MeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C213721D7E645900925874 /* MeViewController.xib */; };
 		F3C213781D7E64C100925874 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C213771D7E64C100925874 /* MainTabBarController.m */; };
+		F3C2137B1D7E8D6600925874 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C2137A1D7E8D6600925874 /* UserInfo.m */; };
+		F3C2137E1D7EA3DD00925874 /* WBGragView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C2137D1D7EA3DD00925874 /* WBGragView.m */; };
 		F3E1DAE91D76DCD900A382F4 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E1DAE81D76DCD900A382F4 /* UIView+frame.m */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,10 @@
 		F3C213721D7E645900925874 /* MeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeViewController.xib; sourceTree = "<group>"; };
 		F3C213761D7E64C100925874 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		F3C213771D7E64C100925874 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		F3C213791D7E8D6600925874 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		F3C2137A1D7E8D6600925874 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		F3C2137C1D7EA3DD00925874 /* WBGragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBGragView.h; sourceTree = "<group>"; };
+		F3C2137D1D7EA3DD00925874 /* WBGragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBGragView.m; sourceTree = "<group>"; };
 		F3E1DAE61D76DB3C00A382F4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F3E1DAE71D76DCD900A382F4 /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		F3E1DAE81D76DCD900A382F4 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
@@ -206,6 +212,8 @@
 			children = (
 				F3C213761D7E64C100925874 /* MainTabBarController.h */,
 				F3C213771D7E64C100925874 /* MainTabBarController.m */,
+				F3C213791D7E8D6600925874 /* UserInfo.h */,
+				F3C2137A1D7E8D6600925874 /* UserInfo.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -295,6 +303,8 @@
 				F3C213701D7E645900925874 /* MeViewController.h */,
 				F3C213711D7E645900925874 /* MeViewController.m */,
 				F3C213721D7E645900925874 /* MeViewController.xib */,
+				F3C2137C1D7EA3DD00925874 /* WBGragView.h */,
+				F3C2137D1D7EA3DD00925874 /* WBGragView.m */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -488,10 +498,12 @@
 				F3C213691D7E643900925874 /* AddressViewController.m in Sources */,
 				F3BECA681D77F47B00146B60 /* CustomButton.m in Sources */,
 				F3BECA6D1D77F50800146B60 /* LogAndRegistViewController.m in Sources */,
+				F3C2137E1D7EA3DD00925874 /* WBGragView.m in Sources */,
 				F3E1DAE91D76DCD900A382F4 /* UIView+frame.m in Sources */,
 				F3C213781D7E64C100925874 /* MainTabBarController.m in Sources */,
 				F3C1541D1D7679E100817B52 /* AppDelegate.m in Sources */,
 				F3C1541A1D7679E100817B52 /* main.m in Sources */,
+				F3C2137B1D7E8D6600925874 /* UserInfo.m in Sources */,
 				F3C2136E1D7E644B00925874 /* FindViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

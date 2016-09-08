@@ -11,7 +11,15 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+/**
+ *  登录成功
+ */
+- (void)logInSuccess;
 
+/**
+ *  退出登录
+ */
+- (void)logOutSuccess;
 
 @end
 

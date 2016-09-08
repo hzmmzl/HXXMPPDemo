@@ -7,18 +7,26 @@
 //
 
 #import "MeViewController.h"
-
+#import "WBGragView.h"
 @interface MeViewController ()
-
+@property (nonatomic , strong) WBGragView *imageView;
 @end
 
 @implementation MeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    self.imageView = [[WBGragView alloc] initWithImage:[UIImage imageNamed:@"Action_qzone"]];
+    [self.view addSubview:_imageView];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clicked)];
+    [self.imageView addGestureRecognizer:tap];
 }
 
 
+- (void)clicked
+{
+    NSLog(@"=========");
+}
 
 @end

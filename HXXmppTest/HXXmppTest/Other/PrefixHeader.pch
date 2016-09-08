@@ -10,7 +10,13 @@
 #import "UIView+frame.h"
 #import "EMSDK.h"
 //#import "UIImageView+WebCache.h"
+//提示框消失时间
 #define kDelayTime 1.5
+
+//通知
+#define kLogInSuccess @"kLogInSuccess"//登录成功
+#define kLogOutSuccess @"kLogOutSuccess"//退出成功
+
 //屏幕
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
