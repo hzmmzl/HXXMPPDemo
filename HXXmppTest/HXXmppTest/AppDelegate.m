@@ -11,7 +11,7 @@
 #import "MainTabBarController.h"
 #import "UserInfo.h"
 #import "MBProgressHUD.h"
-@interface AppDelegate ()<EMClientDelegate,EMChatManagerDelegate>
+@interface AppDelegate ()<EMClientDelegate>
 
 #define HXAppKey @"hzm123#myxmpp"
 #define HXClientId @"YXA6q0YrcFJREea9aaWeNX-5Vw"
@@ -32,13 +32,11 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logInSuccess) name:kLogInSuccess object:nil];
     
     EMOptions *options = [EMOptions optionsWithAppkey:HXAppKey];
-//    options.apnsCertName = @"";
+//    options.apnsCertName = @"";//推送
     [[EMClient sharedClient] initializeSDKWithOptions:options];
     
-    //添加代理
+    //添加代理（自动登录）
     [[EMClient sharedClient] addDelegate:self];
-    // 添加代理方法
-    [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:nil];
     BOOL isAutoLog = [EMClient sharedClient].options.isAutoLogin;//是否自动登录
     if (isAutoLog) {
       MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.window animated:YES];
