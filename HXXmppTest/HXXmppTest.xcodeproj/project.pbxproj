@@ -27,6 +27,10 @@
 		F3C213781D7E64C100925874 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C213771D7E64C100925874 /* MainTabBarController.m */; };
 		F3C2137B1D7E8D6600925874 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C2137A1D7E8D6600925874 /* UserInfo.m */; };
 		F3C2137E1D7EA3DD00925874 /* WBGragView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C2137D1D7EA3DD00925874 /* WBGragView.m */; };
+		F3CC4E411D81335D001711A8 /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CC4E3F1D81335D001711A8 /* AddFriendViewController.m */; };
+		F3CC4E421D81335D001711A8 /* AddFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3CC4E401D81335D001711A8 /* AddFriendViewController.xib */; };
+		F3CC4E451D814C73001711A8 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CC4E441D814C73001711A8 /* MainNavigationController.m */; };
+		F3CC4E481D814F44001711A8 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CC4E471D814F44001711A8 /* SearchViewController.m */; };
 		F3E1DAE91D76DCD900A382F4 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E1DAE81D76DCD900A382F4 /* UIView+frame.m */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +90,13 @@
 		F3C2137A1D7E8D6600925874 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		F3C2137C1D7EA3DD00925874 /* WBGragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBGragView.h; sourceTree = "<group>"; };
 		F3C2137D1D7EA3DD00925874 /* WBGragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBGragView.m; sourceTree = "<group>"; };
+		F3CC4E3E1D81335D001711A8 /* AddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendViewController.h; sourceTree = "<group>"; };
+		F3CC4E3F1D81335D001711A8 /* AddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendViewController.m; sourceTree = "<group>"; };
+		F3CC4E401D81335D001711A8 /* AddFriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFriendViewController.xib; sourceTree = "<group>"; };
+		F3CC4E431D814C73001711A8 /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
+		F3CC4E441D814C73001711A8 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
+		F3CC4E461D814F44001711A8 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		F3CC4E471D814F44001711A8 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		F3E1DAE61D76DB3C00A382F4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F3E1DAE71D76DCD900A382F4 /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		F3E1DAE81D76DCD900A382F4 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
@@ -212,6 +223,8 @@
 			children = (
 				F3C213761D7E64C100925874 /* MainTabBarController.h */,
 				F3C213771D7E64C100925874 /* MainTabBarController.m */,
+				F3CC4E431D814C73001711A8 /* MainNavigationController.h */,
+				F3CC4E441D814C73001711A8 /* MainNavigationController.m */,
 				F3C213791D7E8D6600925874 /* UserInfo.h */,
 				F3C2137A1D7E8D6600925874 /* UserInfo.m */,
 			);
@@ -272,6 +285,11 @@
 				F3C213661D7E643900925874 /* AddressViewController.h */,
 				F3C213671D7E643900925874 /* AddressViewController.m */,
 				F3C213681D7E643900925874 /* AddressViewController.xib */,
+				F3CC4E3E1D81335D001711A8 /* AddFriendViewController.h */,
+				F3CC4E3F1D81335D001711A8 /* AddFriendViewController.m */,
+				F3CC4E401D81335D001711A8 /* AddFriendViewController.xib */,
+				F3CC4E461D814F44001711A8 /* SearchViewController.h */,
+				F3CC4E471D814F44001711A8 /* SearchViewController.m */,
 			);
 			path = AddressBook;
 			sourceTree = "<group>";
@@ -421,6 +439,7 @@
 				F3BECA6E1D77F50800146B60 /* LogAndRegistViewController.xib in Resources */,
 				F3C213651D7E642400925874 /* MessageViewController.xib in Resources */,
 				F3C2136A1D7E643900925874 /* AddressViewController.xib in Resources */,
+				F3CC4E421D81335D001711A8 /* AddFriendViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,8 +515,11 @@
 				F3C213731D7E645900925874 /* MeViewController.m in Sources */,
 				F3C213641D7E642400925874 /* MessageViewController.m in Sources */,
 				F3C213691D7E643900925874 /* AddressViewController.m in Sources */,
+				F3CC4E411D81335D001711A8 /* AddFriendViewController.m in Sources */,
+				F3CC4E451D814C73001711A8 /* MainNavigationController.m in Sources */,
 				F3BECA681D77F47B00146B60 /* CustomButton.m in Sources */,
 				F3BECA6D1D77F50800146B60 /* LogAndRegistViewController.m in Sources */,
+				F3CC4E481D814F44001711A8 /* SearchViewController.m in Sources */,
 				F3C2137E1D7EA3DD00925874 /* WBGragView.m in Sources */,
 				F3E1DAE91D76DCD900A382F4 /* UIView+frame.m in Sources */,
 				F3C213781D7E64C100925874 /* MainTabBarController.m in Sources */,

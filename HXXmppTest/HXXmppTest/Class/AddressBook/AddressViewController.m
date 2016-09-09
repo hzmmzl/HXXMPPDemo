@@ -7,7 +7,7 @@
 //
 
 #import "AddressViewController.h"
-
+#import "AddFriendViewController.h"
 @interface AddressViewController ()
 
 @end
@@ -16,22 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    UIImage *image = [UIImage imageNamed:@"barbuttonicon_add_cube"];
+    //渲染
+//   image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(addFriend)];
+    self.navigationItem.rightBarButtonItem = rightItem;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+/**
+ *  添加好友
+ */
+- (void)addFriend
+{
+//    NSLog(@"添加好友");
+    AddFriendViewController *addFriendVC = [[AddFriendViewController alloc] init];
+    [self.navigationController pushViewController:addFriendVC animated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

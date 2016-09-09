@@ -7,7 +7,7 @@
 //
 
 #import "MainTabBarController.h"
-
+#import "MainNavigationController.h"
 @interface MainTabBarController ()
 
 @end
@@ -23,13 +23,19 @@
     NSMutableArray *vcArr = [NSMutableArray array];
     for (int i = 0; i<classArray.count; i++) {
       UIViewController *vc = [[NSClassFromString(classArray[i]) alloc] init];
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        MainNavigationController *nav = [[MainNavigationController alloc] initWithRootViewController:vc];
         vc.title = titleArray[i];
         vc.tabBarItem.image = [UIImage imageNamed:imageArray[i]];
         vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImageArray[i]];
         [vcArr addObject:nav];
     }
     self.viewControllers = [NSArray arrayWithArray:vcArr];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"所有控制器 = %@",self.viewControllers);
 }
 
 @end
