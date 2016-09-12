@@ -23,6 +23,7 @@
 @property (nonatomic, strong) SearchViewController *searchTVC;
 // 搜索框输入的东西
 @property (nonatomic, copy) NSString *inputText;
+
 @end
 
 @implementation AddFriendViewController
@@ -37,8 +38,6 @@
     [self.view addSubview:_searchTableView];
     // 创建出搜索使用的表示图控制器
     self.searchTVC = [[SearchViewController alloc] initWithStyle:UITableViewStylePlain];
-//    _searchTVC.tableView.delegate = self;
-//    _searchTVC.tableView.dataSource = self;
     
     // 使用表示图控制器创建出搜索控制器
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:_searchTVC];
@@ -70,7 +69,7 @@
 {
     [super viewWillDisappear:animated];
     [self.searchController.searchBar resignFirstResponder];
-    self.searchController.searchBar.hidden = YES;
+    self.searchController.active = NO;
 }
 
 #pragma mark Lazy
@@ -83,6 +82,7 @@
             [_allDataArray addObject:tempStr];
         }
         [_allDataArray addObject:[EMClient sharedClient].currentUsername];
+        [_allDataArray addObject:@"heeepjdf"];
     }
     return _allDataArray;
 }
