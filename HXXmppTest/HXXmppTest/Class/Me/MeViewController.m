@@ -24,9 +24,16 @@
 }
 
 
+/**
+ *  退出
+ */
 - (void)clicked
 {
-    NSLog(@"=========");
+    EMError *error = [[EMClient sharedClient] logout:YES];
+    if (!error) {
+        NSLog(@"退出成功");
+        [[NSNotificationCenter defaultCenter] postNotificationName:kLogOutSuccess object:self];
+    }
 }
 
 @end
