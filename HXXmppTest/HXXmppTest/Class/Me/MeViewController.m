@@ -8,6 +8,7 @@
 
 #import "MeViewController.h"
 #import "WBGragView.h"
+#import "UserInfo.h"
 @interface MeViewController ()
 @property (nonatomic , strong) WBGragView *imageView;
 @end
@@ -21,6 +22,8 @@
     [self.view addSubview:_imageView];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clicked)];
     [self.imageView addGestureRecognizer:tap];
+    UserInfo *info = [UserTool getUserInfo];
+    self.navigationItem.title = info.userName;
 }
 
 

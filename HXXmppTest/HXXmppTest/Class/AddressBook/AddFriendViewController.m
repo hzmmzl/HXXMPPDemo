@@ -8,7 +8,8 @@
 
 #import "AddFriendViewController.h"
 #import "SearchViewController.h"
-@interface AddFriendViewController ()<UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate,UISearchResultsUpdating,UISearchControllerDelegate>
+#import "MBProgressHUD.h"
+@interface AddFriendViewController ()<UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate,UISearchResultsUpdating,UISearchControllerDelegate,EMContactManagerDelegate>
 // searchTableView
 @property (strong, nonatomic)  UITableView *searchTableView;
 // 搜索按钮
@@ -78,11 +79,15 @@
     if (!_allDataArray) {
         _allDataArray = [NSMutableArray array];
         for (NSInteger i =0; i<10; i++) {
-            NSString *tempStr = [NSString stringWithFormat:@"第%ld行行行行",i];
+            NSString *tempStr = [NSString stringWithFormat:@"%ld",i];
             [_allDataArray addObject:tempStr];
         }
         [_allDataArray addObject:[EMClient sharedClient].currentUsername];
-        [_allDataArray addObject:@"heeepjdf"];
+        [_allDataArray addObject:@"hzm"];
+        [_allDataArray addObject:@"m"];
+        [_allDataArray addObject:@"z"];
+        [_allDataArray addObject:@"l"];
+        
     }
     return _allDataArray;
 }
@@ -108,12 +113,16 @@
 #warning 以下代码为测试代码，默认用户体系中有一个符合要求的同名用户
 - (void)getFriend
 {
+    /*
     //手动过滤
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self contains [cd] %@",self.inputText];
     self.searchResultDataArray =  [[NSArray alloc] initWithArray:[self.allDataArray filteredArrayUsingPredicate:predicate]];
     self.searchTVC.dataArray = [NSMutableArray arrayWithArray:_searchResultDataArray];
     [self.searchTVC.tableView reloadData];
     _searchResultDataArray = nil;
+     */
+//    self.searchTVC.dataArray = 
+    
 }
 
 
@@ -147,7 +156,31 @@
 
 //6. 设置搜索tableView 点击进入搜索结果
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    // 跳转操作
+    
+    UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"说点什么吧~" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    [alertView addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"说点什么吧~";
+    }];
+    [alertView addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    [alertView addAction:[UIAlertAction actionWithTitle:@"发送" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //请求
+        UITextField *saySomeThingTextField = alertView.textFields.firstObject;
+        NSString *saySomeThingStr = saySomeThingTextField.text;
+        //发送加好友请求
+        EMError *error = [[EMClient sharedClient].contactManager addContact:_allDataArray[indexPath.row] message:saySomeThingStr];
+        if (!error) {
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            hud.label.text = @"发送成功";
+            [hud hideAnimated:YES afterDelay:kDelayTime];
+            
+            //监听加好友请求
+            //注册好友回调
+            [[EMClient sharedClient].contactManager addDelegate:self delegateQueue:nil];
+        
+        }
+        
+    }]];
+    [self presentViewController:alertView animated:YES completion:nil];
 }
 
 #pragma mark UISearchBarDelegate
@@ -181,5 +214,6 @@
 {
     return YES;
 }
+
 
 @end

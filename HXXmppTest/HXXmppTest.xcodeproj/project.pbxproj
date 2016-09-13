@@ -19,7 +19,6 @@
 		F3C213641D7E642400925874 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C213621D7E642400925874 /* MessageViewController.m */; };
 		F3C213651D7E642400925874 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C213631D7E642400925874 /* MessageViewController.xib */; };
 		F3C213691D7E643900925874 /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C213671D7E643900925874 /* AddressViewController.m */; };
-		F3C2136A1D7E643900925874 /* AddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C213681D7E643900925874 /* AddressViewController.xib */; };
 		F3C2136E1D7E644B00925874 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C2136C1D7E644B00925874 /* FindViewController.m */; };
 		F3C2136F1D7E644B00925874 /* FindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C2136D1D7E644B00925874 /* FindViewController.xib */; };
 		F3C213731D7E645900925874 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C213711D7E645900925874 /* MeViewController.m */; };
@@ -27,11 +26,15 @@
 		F3C213781D7E64C100925874 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C213771D7E64C100925874 /* MainTabBarController.m */; };
 		F3C2137B1D7E8D6600925874 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C2137A1D7E8D6600925874 /* UserInfo.m */; };
 		F3C2137E1D7EA3DD00925874 /* WBGragView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C2137D1D7EA3DD00925874 /* WBGragView.m */; };
+		F3C8A3FF1D8670EA00952D9A /* FriendsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8A3FE1D8670EA00952D9A /* FriendsModel.m */; };
+		F3C8A4051D86723200952D9A /* MyFriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8A4031D86723200952D9A /* MyFriendsTableViewCell.m */; };
+		F3C8A4061D86723200952D9A /* MyFriendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C8A4041D86723200952D9A /* MyFriendsTableViewCell.xib */; };
 		F3CC4E411D81335D001711A8 /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CC4E3F1D81335D001711A8 /* AddFriendViewController.m */; };
 		F3CC4E421D81335D001711A8 /* AddFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3CC4E401D81335D001711A8 /* AddFriendViewController.xib */; };
 		F3CC4E451D814C73001711A8 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CC4E441D814C73001711A8 /* MainNavigationController.m */; };
 		F3CC4E481D814F44001711A8 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CC4E471D814F44001711A8 /* SearchViewController.m */; };
 		F3E1DAE91D76DCD900A382F4 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E1DAE81D76DCD900A382F4 /* UIView+frame.m */; };
+		F3F3991A1D87C66700731ED6 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F399191D87C66700731ED6 /* ChatViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +80,6 @@
 		F3C213631D7E642400925874 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
 		F3C213661D7E643900925874 /* AddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressViewController.h; sourceTree = "<group>"; };
 		F3C213671D7E643900925874 /* AddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
-		F3C213681D7E643900925874 /* AddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressViewController.xib; sourceTree = "<group>"; };
 		F3C2136B1D7E644B00925874 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
 		F3C2136C1D7E644B00925874 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		F3C2136D1D7E644B00925874 /* FindViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindViewController.xib; sourceTree = "<group>"; };
@@ -90,6 +92,11 @@
 		F3C2137A1D7E8D6600925874 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		F3C2137C1D7EA3DD00925874 /* WBGragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBGragView.h; sourceTree = "<group>"; };
 		F3C2137D1D7EA3DD00925874 /* WBGragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBGragView.m; sourceTree = "<group>"; };
+		F3C8A3FD1D8670EA00952D9A /* FriendsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsModel.h; path = ../FriendsModel.h; sourceTree = "<group>"; };
+		F3C8A3FE1D8670EA00952D9A /* FriendsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsModel.m; path = ../FriendsModel.m; sourceTree = "<group>"; };
+		F3C8A4021D86723200952D9A /* MyFriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFriendsTableViewCell.h; sourceTree = "<group>"; };
+		F3C8A4031D86723200952D9A /* MyFriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFriendsTableViewCell.m; sourceTree = "<group>"; };
+		F3C8A4041D86723200952D9A /* MyFriendsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFriendsTableViewCell.xib; sourceTree = "<group>"; };
 		F3CC4E3E1D81335D001711A8 /* AddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendViewController.h; sourceTree = "<group>"; };
 		F3CC4E3F1D81335D001711A8 /* AddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendViewController.m; sourceTree = "<group>"; };
 		F3CC4E401D81335D001711A8 /* AddFriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFriendViewController.xib; sourceTree = "<group>"; };
@@ -100,6 +107,8 @@
 		F3E1DAE61D76DB3C00A382F4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F3E1DAE71D76DCD900A382F4 /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		F3E1DAE81D76DCD900A382F4 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
+		F3F399181D87C66700731ED6 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatViewController.h; path = ../AddressBook/ChatViewController.h; sourceTree = "<group>"; };
+		F3F399191D87C66700731ED6 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatViewController.m; path = ../AddressBook/ChatViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +240,25 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		F3C8A4001D8670FF00952D9A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3C8A3FD1D8670EA00952D9A /* FriendsModel.h */,
+				F3C8A3FE1D8670EA00952D9A /* FriendsModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3C8A4011D86720E00952D9A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F3C8A4021D86723200952D9A /* MyFriendsTableViewCell.h */,
+				F3C8A4031D86723200952D9A /* MyFriendsTableViewCell.m */,
+				F3C8A4041D86723200952D9A /* MyFriendsTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		F3E1DACF1D76D36C00A382F4 /* Temp */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,9 +310,10 @@
 		F3E1DAE21D76D69B00A382F4 /* AddressBook */ = {
 			isa = PBXGroup;
 			children = (
+				F3C8A4011D86720E00952D9A /* Cell */,
+				F3C8A4001D8670FF00952D9A /* Model */,
 				F3C213661D7E643900925874 /* AddressViewController.h */,
 				F3C213671D7E643900925874 /* AddressViewController.m */,
-				F3C213681D7E643900925874 /* AddressViewController.xib */,
 				F3CC4E3E1D81335D001711A8 /* AddFriendViewController.h */,
 				F3CC4E3F1D81335D001711A8 /* AddFriendViewController.m */,
 				F3CC4E401D81335D001711A8 /* AddFriendViewController.xib */,
@@ -300,6 +329,8 @@
 				F3C213611D7E642400925874 /* MessageViewController.h */,
 				F3C213621D7E642400925874 /* MessageViewController.m */,
 				F3C213631D7E642400925874 /* MessageViewController.xib */,
+				F3F399181D87C66700731ED6 /* ChatViewController.h */,
+				F3F399191D87C66700731ED6 /* ChatViewController.m */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -438,8 +469,8 @@
 				F3C154251D7679E100817B52 /* Assets.xcassets in Resources */,
 				F3BECA6E1D77F50800146B60 /* LogAndRegistViewController.xib in Resources */,
 				F3C213651D7E642400925874 /* MessageViewController.xib in Resources */,
-				F3C2136A1D7E643900925874 /* AddressViewController.xib in Resources */,
 				F3CC4E421D81335D001711A8 /* AddFriendViewController.xib in Resources */,
+				F3C8A4061D86723200952D9A /* MyFriendsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,10 +545,13 @@
 			files = (
 				F3C213731D7E645900925874 /* MeViewController.m in Sources */,
 				F3C213641D7E642400925874 /* MessageViewController.m in Sources */,
+				F3C8A4051D86723200952D9A /* MyFriendsTableViewCell.m in Sources */,
 				F3C213691D7E643900925874 /* AddressViewController.m in Sources */,
 				F3CC4E411D81335D001711A8 /* AddFriendViewController.m in Sources */,
 				F3CC4E451D814C73001711A8 /* MainNavigationController.m in Sources */,
+				F3C8A3FF1D8670EA00952D9A /* FriendsModel.m in Sources */,
 				F3BECA681D77F47B00146B60 /* CustomButton.m in Sources */,
+				F3F3991A1D87C66700731ED6 /* ChatViewController.m in Sources */,
 				F3BECA6D1D77F50800146B60 /* LogAndRegistViewController.m in Sources */,
 				F3CC4E481D814F44001711A8 /* SearchViewController.m in Sources */,
 				F3C2137E1D7EA3DD00925874 /* WBGragView.m in Sources */,
