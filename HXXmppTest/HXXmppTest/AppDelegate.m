@@ -37,12 +37,6 @@
     
     //添加代理（自动登录）
     [[EMClient sharedClient] addDelegate:self];
-//    BOOL isAutoLog = [EMClient sharedClient].options.isAutoLogin;//是否自动登录
-//    if (isAutoLog) {
-//      MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.window animated:YES];
-//        hud.label.text = @"正在登陆";
-//    }
-    
     return YES;
 }
 
@@ -125,6 +119,7 @@
     //退出登录
     [self logOutSuccess];
 }
+
 
 
 @end

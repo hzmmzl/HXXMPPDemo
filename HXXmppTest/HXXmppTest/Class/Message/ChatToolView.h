@@ -1,5 +1,5 @@
 //
-//  ChatViewController.h
+//  ChatToolView.h
 //  HXXmppTest
 //
 //  Created by winbei on 16/9/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChatViewController : UIViewController
+@interface ChatToolView : UIView
 
 @end

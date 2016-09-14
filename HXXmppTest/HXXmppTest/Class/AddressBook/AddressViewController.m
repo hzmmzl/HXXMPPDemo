@@ -10,6 +10,8 @@
 #import "AddFriendViewController.h"
 #import "FriendsModel.h"
 #import "MyFriendsTableViewCell.h"
+#import "WeChatViewController.h"
+
 @interface AddressViewController ()<EMContactManagerDelegate>
 
 /**
@@ -29,6 +31,8 @@
     
     //注册好友回调
     [[EMClient sharedClient].contactManager addDelegate:self delegateQueue:nil];
+    
+    
 
 }
 
@@ -183,7 +187,8 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section > 0) {
-        
+        WeChatViewController *chatVC = [[WeChatViewController alloc] init];
+        [self.navigationController pushViewController:chatVC animated:YES];
     }
 }
 
