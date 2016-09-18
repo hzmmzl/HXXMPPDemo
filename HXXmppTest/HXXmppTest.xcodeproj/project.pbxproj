@@ -11,6 +11,11 @@
 		F310562D1D8916430002F218 /* WeChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F310562B1D8916430002F218 /* WeChatViewController.m */; };
 		F31056321D8917770002F218 /* WeChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F31056311D8917770002F218 /* WeChatViewController.xib */; };
 		F31056351D891E5F0002F218 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31056341D891E5F0002F218 /* BaseViewController.m */; };
+		F31056401D894DD00002F218 /* NSDate+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = F31056361D894DD00002F218 /* NSDate+MJ.m */; };
+		F31056411D894DD00002F218 /* UIBarButtonItem+HeadName.m in Sources */ = {isa = PBXBuildFile; fileRef = F31056371D894DD00002F218 /* UIBarButtonItem+HeadName.m */; };
+		F31056421D894DD00002F218 /* UILabel+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = F31056391D894DD00002F218 /* UILabel+Size.m */; };
+		F31056431D894DD00002F218 /* UIImage+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = F310563A1D894DD00002F218 /* UIImage+Size.m */; };
+		F31056441D894DD00002F218 /* NSString+Str.m in Sources */ = {isa = PBXBuildFile; fileRef = F310563B1D894DD00002F218 /* NSString+Str.m */; };
 		F3BECA681D77F47B00146B60 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BECA671D77F47B00146B60 /* CustomButton.m */; };
 		F3BECA6D1D77F50800146B60 /* LogAndRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BECA6B1D77F50800146B60 /* LogAndRegistViewController.m */; };
 		F3BECA6E1D77F50800146B60 /* LogAndRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3BECA6C1D77F50800146B60 /* LogAndRegistViewController.xib */; };
@@ -66,6 +71,16 @@
 		F31056311D8917770002F218 /* WeChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeChatViewController.xib; sourceTree = "<group>"; };
 		F31056331D891E5F0002F218 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		F31056341D891E5F0002F218 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		F31056361D894DD00002F218 /* NSDate+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MJ.m"; sourceTree = "<group>"; };
+		F31056371D894DD00002F218 /* UIBarButtonItem+HeadName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+HeadName.m"; sourceTree = "<group>"; };
+		F31056381D894DD00002F218 /* UIBarButtonItem+HeadName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+HeadName.h"; sourceTree = "<group>"; };
+		F31056391D894DD00002F218 /* UILabel+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Size.m"; sourceTree = "<group>"; };
+		F310563A1D894DD00002F218 /* UIImage+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Size.m"; sourceTree = "<group>"; };
+		F310563B1D894DD00002F218 /* NSString+Str.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Str.m"; sourceTree = "<group>"; };
+		F310563C1D894DD00002F218 /* NSDate+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MJ.h"; sourceTree = "<group>"; };
+		F310563D1D894DD00002F218 /* UIImage+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Size.h"; sourceTree = "<group>"; };
+		F310563E1D894DD00002F218 /* UILabel+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Size.h"; sourceTree = "<group>"; };
+		F310563F1D894DD00002F218 /* NSString+Str.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Str.h"; sourceTree = "<group>"; };
 		F3BECA661D77F47B00146B60 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		F3BECA671D77F47B00146B60 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		F3BECA6A1D77F50800146B60 /* LogAndRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogAndRegistViewController.h; sourceTree = "<group>"; };
@@ -313,6 +328,16 @@
 			children = (
 				F3E1DAE71D76DCD900A382F4 /* UIView+frame.h */,
 				F3E1DAE81D76DCD900A382F4 /* UIView+frame.m */,
+				F31056361D894DD00002F218 /* NSDate+MJ.m */,
+				F31056371D894DD00002F218 /* UIBarButtonItem+HeadName.m */,
+				F31056381D894DD00002F218 /* UIBarButtonItem+HeadName.h */,
+				F31056391D894DD00002F218 /* UILabel+Size.m */,
+				F310563A1D894DD00002F218 /* UIImage+Size.m */,
+				F310563B1D894DD00002F218 /* NSString+Str.m */,
+				F310563C1D894DD00002F218 /* NSDate+MJ.h */,
+				F310563D1D894DD00002F218 /* UIImage+Size.h */,
+				F310563E1D894DD00002F218 /* UILabel+Size.h */,
+				F310563F1D894DD00002F218 /* NSString+Str.h */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -569,15 +594,20 @@
 				F31056351D891E5F0002F218 /* BaseViewController.m in Sources */,
 				F3C213641D7E642400925874 /* MessageViewController.m in Sources */,
 				F3C8A4051D86723200952D9A /* MyFriendsTableViewCell.m in Sources */,
+				F31056421D894DD00002F218 /* UILabel+Size.m in Sources */,
 				F3C213691D7E643900925874 /* AddressViewController.m in Sources */,
+				F31056411D894DD00002F218 /* UIBarButtonItem+HeadName.m in Sources */,
 				F3CC4E411D81335D001711A8 /* AddFriendViewController.m in Sources */,
+				F31056431D894DD00002F218 /* UIImage+Size.m in Sources */,
 				F310562D1D8916430002F218 /* WeChatViewController.m in Sources */,
+				F31056401D894DD00002F218 /* NSDate+MJ.m in Sources */,
 				F3CC4E451D814C73001711A8 /* MainNavigationController.m in Sources */,
 				F3C8A3FF1D8670EA00952D9A /* FriendsModel.m in Sources */,
 				F3BECA681D77F47B00146B60 /* CustomButton.m in Sources */,
 				F3BECA6D1D77F50800146B60 /* LogAndRegistViewController.m in Sources */,
 				F3F3991E1D87D6FF00731ED6 /* ChatToolView.m in Sources */,
 				F3CC4E481D814F44001711A8 /* SearchViewController.m in Sources */,
+				F31056441D894DD00002F218 /* NSString+Str.m in Sources */,
 				F3C2137E1D7EA3DD00925874 /* WBGragView.m in Sources */,
 				F3E1DAE91D76DCD900A382F4 /* UIView+frame.m in Sources */,
 				F3C213781D7E64C100925874 /* MainTabBarController.m in Sources */,

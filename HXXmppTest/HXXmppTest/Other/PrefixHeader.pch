@@ -27,6 +27,7 @@
 #define kColorWithRBGA(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 #define kColorWithRBG(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(1)]
 #define kMainColor kColorWithRBG(47, 114, 213)
+#define kGrayColor(r) [UIColor colorWithRed:(r)/255.0 green:(r)/255.0 blue:(r)/255.0 alpha:(1)]
 
 //字体
 #define kSystemFontSize(size) [UIFont systemFontOfSize:size]

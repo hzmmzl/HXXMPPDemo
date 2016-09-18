@@ -18,8 +18,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setUpTableView];
+    [self setUpBottomToolView];
+    [self keyBoardNotification];
 }
 
+/**
+ *键盘通知
+ */
+- (void)keyBoardNotification
+{//_chatToolView.textView
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardFrameChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
+}
 
 /**
  *  设置tableview
@@ -42,16 +52,46 @@
     [self.view addSubview:_chatToolView];
 }
 
+/**
+ *  键盘通知
+ */
+- (void)keyBoardFrameChange:(NSNotification *)notification
+{
+//    NSLog(@"=====notify.object = %@,notify.userInfo = %@,notify = %@",notify.object,notify.userInfo,notify);
+    //时间
+//    UIKeyboardAnimationDurationUserInfoKey
+    //最终frame
+//    UIKeyboardFrameEndUserInfoKey
+    //开始frame
+//    UIKeyboardFrameBeginUserInfoKey
+    
+    NSLog(@"notify = %@",notification.userInfo);
+    NSDictionary *info = [notification userInfo];
+    CGFloat duration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    CGRect beginKeyboardRect = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    CGRect endKeyboardRect = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    
+    CGFloat yOffset = endKeyboardRect.origin.y - beginKeyboardRect.origin.y;
+    
+    CGRect inputFieldRect = self.chatToolView.frame;
+    
+    inputFieldRect.origin.y += yOffset;
+    
+    [UIView animateWithDuration:duration animations:^{
+        self.chatToolView.frame = inputFieldRect;
+    }];
+}
+
 
 #pragma mark ---UITableViewDelegate,UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -59,5 +99,13 @@
     return nil;
 }
 
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    [self.view endEditing:YES];
+}
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 @end

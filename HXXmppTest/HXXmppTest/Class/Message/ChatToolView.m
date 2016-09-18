@@ -7,22 +7,24 @@
 //
 
 #import "ChatToolView.h"
+#import "UIImage+Size.h"
 #define kPadding 10
 #define kTopPadding 5
 #define kImageH 30
 #define kImageW 30
-@interface ChatToolView()
+@interface ChatToolView()<UITextViewDelegate>
 @property (nonatomic , weak) UIButton *yuYinImageView;
 @property (nonatomic , weak) UIButton *biaoQinImageView;
 @property (nonatomic , weak) UIButton *pictureImageView;
 @property (nonatomic , weak) UITextView *textView;
+@property (nonatomic , weak) UIButton *pressButton;
 @end
 @implementation ChatToolView
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
         
-        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"chatBar_recordBg"]];
+        self.backgroundColor = kGrayColor(230);
         UIButton *yuYin = [[UIButton alloc] init];
         [yuYin setImage:[UIImage imageNamed:@"chatBar_keyboard"] forState:UIControlStateNormal];
         [yuYin setImage:[UIImage imageNamed:@"chatBar_keyboardSelected"] forState:UIControlStateHighlighted];
@@ -31,10 +33,11 @@
         self.yuYinImageView = yuYin;
         
         UITextView *textView = [[UITextView alloc] init];
-        textView.backgroundColor = kColorWithRBG(247, 247, 247);
+        textView.backgroundColor = kGrayColor(247);//kColorWithRBG(247, 247, 247);
         textView.layer.borderColor = kColorWithRBG(216, 216, 216).CGColor;
         textView.layer.borderWidth = 1;
         [self addSubview:textView];
+        textView.delegate = self;
         self.textView = textView;
         
         UIButton *biaoQin = [[UIButton alloc] init];
@@ -51,18 +54,27 @@
         [self addSubview:picture];
         self.pictureImageView = picture;
         
+        UIButton *pressBtn = [[UIButton alloc] init];
+        [pressBtn setTitle:@"按住录音" forState:UIControlStateNormal];
+        [pressBtn setTitle:@"松开发送" forState:UIControlStateHighlighted];
+        [self addSubview:pressBtn];
+        pressBtn.hidden = YES;
+        self.pressButton = pressBtn;
+        
     }
     return self;
 }
 
 - (void)yuYinClicked:(UIButton *)bun
 {
-    if (bun.selected == YES) {
+    if (bun.selected == YES) {//语言
         [_yuYinImageView setImage:[UIImage imageNamed:@"chatBar_record"] forState:UIControlStateNormal];
         [_yuYinImageView setImage:[UIImage imageNamed:@"chatBar_recordSelected"] forState:UIControlStateHighlighted];
-    }else{
+        _pressButton.hidden = NO;
+    }else{//键盘
         [_yuYinImageView setImage:[UIImage imageNamed:@"chatBar_keyboard"] forState:UIControlStateNormal];
         [_yuYinImageView setImage:[UIImage imageNamed:@"chatBar_keyboardSelected"] forState:UIControlStateHighlighted];
+        _pressButton.hidden = YES;
     }
 }
 
@@ -78,8 +90,16 @@
     [super layoutSubviews];
     _yuYinImageView.frame = CGRectMake(kPadding, kTopPadding, kImageW, kImageH);
     _pictureImageView.frame = CGRectMake(self.width - kPadding-kImageW, kTopPadding, kImageW, kImageH);
-    _biaoQinImageView.frame = CGRectMake(self.width - kImageW*2 - 3*kPadding, kTopPadding, kImageW, kImageH);
-    _textView.frame = CGRectMake(CGRectGetMaxX(_yuYinImageView.frame) + kPadding, kTopPadding, CGRectGetMinX(_biaoQinImageView.frame) - kPadding, kImageH);
+    _biaoQinImageView.frame = CGRectMake(self.width - kImageW*2 - 2*kPadding, kTopPadding, kImageW, kImageH);
+    _textView.frame = CGRectMake(CGRectGetMaxX(_yuYinImageView.frame) + kPadding, kTopPadding, CGRectGetMinX(_biaoQinImageView.frame) - 3*kPadding - kImageW, kImageH);
+    _pressButton.frame = _textView.frame;
+}
+
+
+#pragma mark UITextViewDelegate
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:UIKeyboardWillChangeFrameNotification object:textView];
 }
 
 @end
