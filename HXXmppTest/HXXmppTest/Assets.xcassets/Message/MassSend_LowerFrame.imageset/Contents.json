@@ -5,6 +5,20 @@
       "scale" : "1x"
     },
     {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1,
+          "height" : 1
+        },
+        "cap-insets" : {
+          "bottom" : 74,
+          "top" : 73,
+          "right" : 30,
+          "left" : 29
+        }
+      },
       "idiom" : "universal",
       "filename" : "MassSend_LowerFrame@2x.png",
       "scale" : "2x"

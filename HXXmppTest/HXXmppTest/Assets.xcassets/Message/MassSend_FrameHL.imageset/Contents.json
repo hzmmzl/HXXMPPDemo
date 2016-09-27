@@ -5,6 +5,20 @@
       "scale" : "1x"
     },
     {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 5,
+          "height" : 1
+        },
+        "cap-insets" : {
+          "bottom" : 59,
+          "top" : 44,
+          "right" : 28,
+          "left" : 27
+        }
+      },
       "idiom" : "universal",
       "filename" : "MassSend_FrameHL@2x.png",
       "scale" : "2x"

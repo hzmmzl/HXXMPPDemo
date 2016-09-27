@@ -12,6 +12,7 @@
 @interface WeChatViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic , strong) UITableView *tableView;
 @property (nonatomic , strong) ChatToolView *chatToolView;
+@property (nonatomic , strong) NSMutableArray *dataMessageArray;
 @end
 
 @implementation WeChatViewController
@@ -21,6 +22,15 @@
     [self setUpTableView];
     [self setUpBottomToolView];
     [self keyBoardNotification];
+    
+}
+
+/**
+ *  获取当前聊天列表
+ */
+- (void)getCurrentChatMessages
+{
+    
 }
 
 /**
@@ -37,6 +47,7 @@
 
 - (void)setUpTableView
 {
+    self.title = _chatFriendName;
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - 64 - kToolHeight) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -50,6 +61,30 @@
 {
     self.chatToolView = [[ChatToolView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_tableView.frame), kScreenWidth, kToolHeight)];
     [self.view addSubview:_chatToolView];
+    
+    //点击发送按钮发送消息
+    NSString *to = _chatFriendName;
+    _chatToolView.textViewSendBlock = ^(UITextView *textView,SendMessageType type){
+        if (type == SendMessageTypeMessage) {
+            EMTextMessageBody *body = [[EMTextMessageBody alloc] initWithText:textView.text];
+            NSString *from = [[EMClient sharedClient] currentUsername];
+            //生成MessageEMMessageBody
+            EMMessage *message = [[EMMessage alloc] initWithConversationID:to from:from to:to body:body ext:nil];
+            message.chatType = EMChatTypeChat;// 设置为单聊消息
+            //message.chatType = EMChatTypeGroupChat;// 设置为群聊消息
+            //message.chatType = EMChatTypeChatRoom;// 设置为聊天室消息
+//            [[EMClient sharedClient].chatManager sendMessageReadAck:message completion:^(EMMessage *aMessage, EMError *aError) {
+//                NSLog(@"发送完成");
+//                NSLog(@"message = %@",aMessage);
+//            }];
+            [[EMClient sharedClient].chatManager sendMessage:message progress:^(int progress) {
+                
+            } completion:^(EMMessage *message, EMError *error) {
+                NSLog(@"发送完成");
+                NSLog(@"message = %@",message);
+            }];
+        }
+    };
 }
 
 /**
@@ -81,7 +116,14 @@
         self.chatToolView.frame = inputFieldRect;
     }];
 }
-
+#pragma mark ---lazy
+- (NSMutableArray *)dataMessageArray
+{
+    if (!_dataMessageArray) {
+        _dataMessageArray = [NSMutableArray array];
+    }
+    return _dataMessageArray;
+}
 
 #pragma mark ---UITableViewDelegate,UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

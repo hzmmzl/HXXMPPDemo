@@ -188,6 +188,10 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section > 0) {
         WeChatViewController *chatVC = [[WeChatViewController alloc] init];
+        /**
+         *  与谁聊天
+         */
+        chatVC.chatFriendName = ((FriendsModel *)self.currentFriendsArray[indexPath.row]).title;
         [self.navigationController pushViewController:chatVC animated:YES];
     }
 }

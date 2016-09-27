@@ -57,6 +57,9 @@
         UIButton *pressBtn = [[UIButton alloc] init];
         [pressBtn setTitle:@"按住录音" forState:UIControlStateNormal];
         [pressBtn setTitle:@"松开发送" forState:UIControlStateHighlighted];
+        [pressBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [pressBtn setBackgroundImage:[UIImage resizedImageWithName:@"MassSend_SendAgain"] forState:UIControlStateNormal];
+        [pressBtn setBackgroundImage:[UIImage resizedImageWithName:@"MassSend_SendAgainHL"] forState:UIControlStateHighlighted];
         [self addSubview:pressBtn];
         pressBtn.hidden = YES;
         self.pressButton = pressBtn;
@@ -67,22 +70,33 @@
 
 - (void)yuYinClicked:(UIButton *)bun
 {
+    bun.selected = !bun.selected;
     if (bun.selected == YES) {//语言
         [_yuYinImageView setImage:[UIImage imageNamed:@"chatBar_record"] forState:UIControlStateNormal];
         [_yuYinImageView setImage:[UIImage imageNamed:@"chatBar_recordSelected"] forState:UIControlStateHighlighted];
+        _textView.hidden = YES;
         _pressButton.hidden = NO;
     }else{//键盘
         [_yuYinImageView setImage:[UIImage imageNamed:@"chatBar_keyboard"] forState:UIControlStateNormal];
         [_yuYinImageView setImage:[UIImage imageNamed:@"chatBar_keyboardSelected"] forState:UIControlStateHighlighted];
+        _textView.hidden = NO;
         _pressButton.hidden = YES;
     }
 }
 
 - (void)biaoQinClicked:(UIButton *)bun
-{}
+{
+//    if (_toolButtonBlock) {
+//        _toolButtonBlock(bun,ButtonTypeBiaoQin);
+//    }
+}
 
 - (void)pictureClicked:(UIButton *)bun
-{}
+{
+//    if (_toolButtonBlock) {
+//        _toolButtonBlock(bun,ButtonTypeBiaoQin);
+//    }
+}
 
 
 - (void)layoutSubviews
@@ -99,7 +113,19 @@
 #pragma mark UITextViewDelegate
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:UIKeyboardWillChangeFrameNotification object:textView];
 }
+
+- (void)textViewDidChange:(UITextView *)textView
+{
+    if (!textView.text.length ) return;
+    if ([textView.text hasSuffix:@"\n"]) {
+        //发送信息
+        if (self.textViewSendBlock) {
+            _textViewSendBlock(textView,SendMessageTypeMessage);
+        }
+        [self.textView resignFirstResponder];
+    }
+}
+
 
 @end
