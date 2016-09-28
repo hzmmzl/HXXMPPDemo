@@ -11,7 +11,7 @@
 #import "FriendsModel.h"
 #import "MyFriendsTableViewCell.h"
 #import "WeChatViewController.h"
-#import "EaseUI.h"
+//#import "EaseUI.h"
 @interface AddressViewController ()<EMContactManagerDelegate>
 
 /**
@@ -189,8 +189,8 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section > 0) {
-//        WeChatViewController *chatVC = [[WeChatViewController alloc] init];
-        WeChatViewController *chatVc = [[WeChatViewController alloc] initWithConversationChatter:buddy conversationType:EMConversationTypeChat];
+        WeChatViewController *chatVC = [[WeChatViewController alloc] init];
+//        WeChatViewController *chatVc = [[WeChatViewController alloc] initWithConversationChatter:buddy conversationType:EMConversationTypeChat];
         /**
          *  与谁聊天
          */
