@@ -11,7 +11,7 @@
 #import "FriendsModel.h"
 #import "MyFriendsTableViewCell.h"
 #import "WeChatViewController.h"
-
+#import "EaseUI.h"
 @interface AddressViewController ()<EMContactManagerDelegate>
 
 /**
@@ -110,7 +110,9 @@
                     model.icon = @"Action_Chat1";
                     [self.currentFriendsArray addObject:model];
                 }
-                [self.tableView reloadData];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.tableView reloadData];
+                });
             }
         }];
     
@@ -122,7 +124,7 @@
  */
 - (void)showFindFriendsAndTabBarBadge
 {
-    self.tabBarItem.badgeValue = @"11";
+    self.tabBarItem.badgeValue = @"";
 }
 
 
@@ -187,7 +189,8 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section > 0) {
-        WeChatViewController *chatVC = [[WeChatViewController alloc] init];
+//        WeChatViewController *chatVC = [[WeChatViewController alloc] init];
+        WeChatViewController *chatVc = [[WeChatViewController alloc] initWithConversationChatter:buddy conversationType:EMConversationTypeChat];
         /**
          *  与谁聊天
          */

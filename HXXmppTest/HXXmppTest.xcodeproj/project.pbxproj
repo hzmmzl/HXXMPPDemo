@@ -16,6 +16,8 @@
 		F31056421D894DD00002F218 /* UILabel+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = F31056391D894DD00002F218 /* UILabel+Size.m */; };
 		F31056431D894DD00002F218 /* UIImage+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = F310563A1D894DD00002F218 /* UIImage+Size.m */; };
 		F31056441D894DD00002F218 /* NSString+Str.m in Sources */ = {isa = PBXBuildFile; fileRef = F310563B1D894DD00002F218 /* NSString+Str.m */; };
+		F3AA8F991D9A4ADD00ADF2A2 /* WeChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3AA8F971D9A4ADD00ADF2A2 /* WeChatTableViewCell.m */; };
+		F3AA8F9D1D9A510C00ADF2A2 /* WeChatFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3AA8F9C1D9A510C00ADF2A2 /* WeChatFrameModel.m */; };
 		F3BECA681D77F47B00146B60 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BECA671D77F47B00146B60 /* CustomButton.m */; };
 		F3BECA6D1D77F50800146B60 /* LogAndRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BECA6B1D77F50800146B60 /* LogAndRegistViewController.m */; };
 		F3BECA6E1D77F50800146B60 /* LogAndRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3BECA6C1D77F50800146B60 /* LogAndRegistViewController.xib */; };
@@ -81,6 +83,10 @@
 		F310563D1D894DD00002F218 /* UIImage+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Size.h"; sourceTree = "<group>"; };
 		F310563E1D894DD00002F218 /* UILabel+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Size.h"; sourceTree = "<group>"; };
 		F310563F1D894DD00002F218 /* NSString+Str.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Str.h"; sourceTree = "<group>"; };
+		F3AA8F961D9A4ADD00ADF2A2 /* WeChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeChatTableViewCell.h; sourceTree = "<group>"; };
+		F3AA8F971D9A4ADD00ADF2A2 /* WeChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeChatTableViewCell.m; sourceTree = "<group>"; };
+		F3AA8F9B1D9A510C00ADF2A2 /* WeChatFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeChatFrameModel.h; sourceTree = "<group>"; };
+		F3AA8F9C1D9A510C00ADF2A2 /* WeChatFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeChatFrameModel.m; sourceTree = "<group>"; };
 		F3BECA661D77F47B00146B60 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		F3BECA671D77F47B00146B60 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		F3BECA6A1D77F50800146B60 /* LogAndRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogAndRegistViewController.h; sourceTree = "<group>"; };
@@ -328,16 +334,16 @@
 			children = (
 				F3E1DAE71D76DCD900A382F4 /* UIView+frame.h */,
 				F3E1DAE81D76DCD900A382F4 /* UIView+frame.m */,
-				F31056361D894DD00002F218 /* NSDate+MJ.m */,
-				F31056371D894DD00002F218 /* UIBarButtonItem+HeadName.m */,
 				F31056381D894DD00002F218 /* UIBarButtonItem+HeadName.h */,
-				F31056391D894DD00002F218 /* UILabel+Size.m */,
-				F310563A1D894DD00002F218 /* UIImage+Size.m */,
+				F31056371D894DD00002F218 /* UIBarButtonItem+HeadName.m */,
+				F310563F1D894DD00002F218 /* NSString+Str.h */,
 				F310563B1D894DD00002F218 /* NSString+Str.m */,
 				F310563C1D894DD00002F218 /* NSDate+MJ.h */,
+				F31056361D894DD00002F218 /* NSDate+MJ.m */,
 				F310563D1D894DD00002F218 /* UIImage+Size.h */,
+				F310563A1D894DD00002F218 /* UIImage+Size.m */,
 				F310563E1D894DD00002F218 /* UILabel+Size.h */,
-				F310563F1D894DD00002F218 /* NSString+Str.h */,
+				F31056391D894DD00002F218 /* UILabel+Size.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -400,6 +406,10 @@
 			children = (
 				F3F3991C1D87D6FF00731ED6 /* ChatToolView.h */,
 				F3F3991D1D87D6FF00731ED6 /* ChatToolView.m */,
+				F3AA8F961D9A4ADD00ADF2A2 /* WeChatTableViewCell.h */,
+				F3AA8F971D9A4ADD00ADF2A2 /* WeChatTableViewCell.m */,
+				F3AA8F9B1D9A510C00ADF2A2 /* WeChatFrameModel.h */,
+				F3AA8F9C1D9A510C00ADF2A2 /* WeChatFrameModel.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -593,12 +603,14 @@
 				F3C213731D7E645900925874 /* MeViewController.m in Sources */,
 				F31056351D891E5F0002F218 /* BaseViewController.m in Sources */,
 				F3C213641D7E642400925874 /* MessageViewController.m in Sources */,
+				F3AA8F991D9A4ADD00ADF2A2 /* WeChatTableViewCell.m in Sources */,
 				F3C8A4051D86723200952D9A /* MyFriendsTableViewCell.m in Sources */,
 				F31056421D894DD00002F218 /* UILabel+Size.m in Sources */,
 				F3C213691D7E643900925874 /* AddressViewController.m in Sources */,
 				F31056411D894DD00002F218 /* UIBarButtonItem+HeadName.m in Sources */,
 				F3CC4E411D81335D001711A8 /* AddFriendViewController.m in Sources */,
 				F31056431D894DD00002F218 /* UIImage+Size.m in Sources */,
+				F3AA8F9D1D9A510C00ADF2A2 /* WeChatFrameModel.m in Sources */,
 				F310562D1D8916430002F218 /* WeChatViewController.m in Sources */,
 				F31056401D894DD00002F218 /* NSDate+MJ.m in Sources */,
 				F3CC4E451D814C73001711A8 /* MainNavigationController.m in Sources */,

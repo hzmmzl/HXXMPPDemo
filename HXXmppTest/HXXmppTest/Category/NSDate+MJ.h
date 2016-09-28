@@ -26,4 +26,5 @@
  *  获得与当前时间的差距
  */
 - (NSDateComponents *)deltaWithNow;
+
 @end

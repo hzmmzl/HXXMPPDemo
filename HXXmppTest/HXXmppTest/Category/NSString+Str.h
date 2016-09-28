@@ -10,4 +10,7 @@
 
 @interface NSString (Str)
 - (BOOL)containsSubString:(NSString *)str;
+
+
+- (CGSize)getSize:(UIFont *)font maxSize:(CGSize)maxSize;
 @end

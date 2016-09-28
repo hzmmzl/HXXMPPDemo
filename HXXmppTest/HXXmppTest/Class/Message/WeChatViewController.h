@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+
 @interface WeChatViewController : BaseViewController
 
 /**
  *  与谁聊天
  */
 @property (nonatomic , copy) NSString *chatFriendName;
+
 @end

@@ -20,12 +20,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HXXmppTest/Class/Message/WeChatViewController.m"
-            timestampString = "495958750.045676"
+            timestampString = "496738190.412204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "-setUpBottomToolView"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-getCurrentChatMessages"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HXXmppTest/Class/Message/WeChatViewController.m"
+            timestampString = "496738192.842305"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-getCurrentChatMessages"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

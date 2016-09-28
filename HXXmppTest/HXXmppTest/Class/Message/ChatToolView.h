@@ -31,5 +31,6 @@ typedef void (^ToolTextViewSend)(UITextView *textView,SendMessageType type);
 @property (nonatomic , assign) SendMessageType sendMessageType;
 //block
 @property (nonatomic , copy)  ToolButtonClickBlock toolButtonBlock;
+//点击发送消息之后的回调
 @property (nonatomic , copy) ToolTextViewSend textViewSendBlock;
 @end

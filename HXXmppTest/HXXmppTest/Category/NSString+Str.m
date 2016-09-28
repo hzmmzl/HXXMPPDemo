@@ -21,4 +21,17 @@
     }
     return NO;
 }
+
+
+- (CGSize)getSize:(UIFont *)font maxSize:(CGSize)maxSize
+{
+    CGSize size = CGSizeZero;
+    if (IS_IOS7) {
+        size = [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil].size;
+        //        size = [self.text sizeWithAttributes:@{NSFontAttributeName:font}];
+    }else{
+        size = [self sizeWithFont:font];
+    }
+    return size;
+}
 @end

@@ -5,11 +5,39 @@
       "scale" : "1x"
     },
     {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1,
+          "height" : 1
+        },
+        "cap-insets" : {
+          "bottom" : 54,
+          "top" : 53,
+          "right" : 42,
+          "left" : 41
+        }
+      },
       "idiom" : "universal",
       "filename" : "ReceiverTextNodeBkg@2x.png",
       "scale" : "2x"
     },
     {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1,
+          "height" : 1
+        },
+        "cap-insets" : {
+          "bottom" : 59,
+          "top" : 95,
+          "right" : 63,
+          "left" : 57
+        }
+      },
       "idiom" : "universal",
       "filename" : "ReceiverTextNodeBkg@3x.png",
       "scale" : "3x"
